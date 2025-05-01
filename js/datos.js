@@ -5,3 +5,4 @@ const direccionLink = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1361
 const coordenadas = "Escuela de Aviación Militar";
 const formAsistencia = "https://docs.google.com/forms/d/e/1FAIpQLSclRrsz94Ko0tLpMVTm856G5cC4u7IXLdixWcLiBk9hQscRxA/viewform?usp=header";
 const formCanciones = "https://docs.google.com/forms/d/e/1FAIpQLSf0bIShEgqtJWvriLv3M4YBJZEPxfaJva1gAY7NqBL5cEB_8g/viewform?usp=header";
+const fechaGoogle = "https://calendar.app.google/iJuSvoi9M3pCmRTw9";
