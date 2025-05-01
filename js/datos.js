@@ -2,6 +2,6 @@ const nombre = "Catalina";
 const fecha = new Date("07/12/2025 19:00");
 const cumple = new Date("07/12/2025");
 const direccionLink = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13616.538081182525!2d-64.2869549!3d-31.4379634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a1ce2884ded7%3A0x5ffdc8e35ccceea8!2sEscuela%20de%20Aviaci%C3%B3n%20Militar!5e0!3m2!1ses-419!2sar!4v1745712962501!5m2!1ses-419!2sar";
-const coordenadas = "-64.2869549,-31.4379634";
+const coordenadas = "Escuela de Aviación Militar";
 const formAsistencia = "https://docs.google.com/forms/d/e/1FAIpQLSclRrsz94Ko0tLpMVTm856G5cC4u7IXLdixWcLiBk9hQscRxA/viewform?usp=header";
 const formCanciones = "https://docs.google.com/forms/d/e/1FAIpQLSf0bIShEgqtJWvriLv3M4YBJZEPxfaJva1gAY7NqBL5cEB_8g/viewform?usp=header";
