@@ -46,25 +46,30 @@ let intervalo = setInterval(() => {
 const mapa = document.querySelector("#ubicacion");
 mapa.innerHTML = `<iframe class="col-10 rounded-4 my-5" src="${direccionLink}" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
 
+
 function abrirMapa() {
 
     const esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    console.log (esMovil)
-
     if (esMovil) {
-        // Intenta abrir la app de Google Maps
-            window.location.href = `comgooglemaps://?q=${coordenadas}`;
+        let appUrl;
 
-        // Fallback: Si no tiene la app, abre en el navegador
-            setTimeout(() => {
-            window.open(direccionLink, '_blank');
-            }, 1000);
+        if (/Android/i.test(navigator.userAgent)) {
+            appUrl = `geo:${coordenadas}?q=${coordenadas}`;
         } else {
-        // En escritorio, abre directamente en una nueva pestaña
-            window.open(direccionLink, '_blank');
+            appUrl = `comgooglemaps://?q=${coordenadas}`;
         }
+
+        window.location.href = appUrl;
+
+        setTimeout(() => {
+            window.open(direccionLink, '_blank');
+        }, 1000);
+    } else {
+        // Escritorio: abrir en nueva pestaña
+        window.open(direccionLink, '_blank');
     }
+}
 
     const confAsistencia = document.querySelector("#confirmarAsistencia");
     confAsistencia.innerHTML = `<button class="mb-3 btnn py-2 px-4"><a href="${formAsistencia}" target="_blank">Confirmar Asistencia</a></button>`
