@@ -37,8 +37,8 @@ let intervalo = setInterval(() => {
     const segundos = Math.floor((distancia % msPorMinuto) / msPorSegundo);
 
     parrafoDias.innerHTML = dias < 1 ? grupoDias.classList.add("d-none") : dias;
-    parrafoHoras.innerHTML = horas < 1 ? grupoHoras.classList.add("d-none") : horas < 10 ? "0" + horas : horas;
-    parrafoMinutos.innerHTML = minutos < 0 ? grupoMinutos.classList.add("d-none") : minutos < 10 ? "0" + minutos : minutos;
+    parrafoHoras.innerHTML = horas < 1 ? dias < 1 ? grupoHoras.classList.add("d-none") : "00" : horas < 10 ? "0" + horas : horas;
+    parrafoMinutos.innerHTML = minutos < 1 ? horas < 1 ? grupoMinutos.classList.add("d-none") : "00" : minutos < 10 ? "0" + minutos : minutos;
     parrafoSegundos.innerHTML = segundos < 10 ? "0" + segundos : segundos;
 
 }, 1000);

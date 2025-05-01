@@ -15,7 +15,7 @@
 :root {
     --colorPrimario: #fff;
     --colorSecundario: #012E40;
-    --colorFondo: #023859;
+    --colorFondo: #01273e;
     --colorGris: #99979A;
     --colorGrisOscuro: #333;
 }
@@ -26,12 +26,31 @@
     width: 100%;
 }
 
+.txtDetalle {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .title {
     color: var(--colorGris);
     font-family: moon dance;
+    font-size: clamp(1.5rem, 10vh, 4rem);
+}
+
+.txtWelcome {
+    font-size: 130%;
+    font-weight: bold;
 }
 
 .fondoGral {
+    background-color: var(--colorFondo);
+    background-image: url("../img/encabezado02.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.fondoNegro {
     background-color: var(--colorFondo);
 }
 
@@ -41,8 +60,8 @@
 }
 
 .encabezado {
-    background-image: url("../img/encabezado.png");
-    background-size: cover;
+    /* background-image: url("../img/encabezado02.png"); */
+    /* background-size: cover; */
 }
 
 .texShadonw {
@@ -51,6 +70,10 @@
                     0px 0px 20px #023859,
                     0px 0px 40px #023859,
                     0px 0px 80px #023859;
+}
+
+.txtPrincipal {
+    font-size: clamp(6rem, 3vh, 8rem);
 }
 
 .texShadonwNegro {
@@ -63,20 +86,109 @@
 
 .box {
     background-color: var(--colorPrimario);
+    background-image: url("../img/estrellas.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.dressCode {
+    position: absolute;
+}
+
+.dressCode p {
+    position: relative;
+    z-index: 3;
+}
+
+.dressCode::after {
+    content: "";
+    background: var(--colorPrimario);
+    border-color: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: 600%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.dressCode::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #333, #023859, #000000, #023859, #000000, #333, #023859, #333
+    );
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-size: 600%;
+    z-index: 1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
 }
 
 .grupo {
     margin: 15px;
     margin-bottom: 30px;
+    width: 50px;
+    height: 50px;
+    position: relative;
 }
 
 .grande {
     margin: 0;
+    position: relative;
+    z-index: 3;
 }
 
 .chico {
     font-size: 10px;
+    position: relative;
+    z-index: 3;
     margin: 0;
+}
+
+.grupo::after {
+    content: "";
+    background: var(--colorPrimario);
+    border-color: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: 600%;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    opacity: 1;
+}
+
+.grupo::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #333, #023859, #000000, #023859, #000000, #333, #023859, #333
+    );
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-size: 600%;
+    z-index: 1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 100%;
+    opacity: 1;
 }
 
 
