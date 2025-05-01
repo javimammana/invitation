@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body class="d-flex justify-content-center fondoGral">
+    <div class="d-flex flex-column col-12 text-center contenedor">
+        <div class="encabezado col-12 d-flex flex-column align-items-center py-5">
+            <!-- <h1 class="colorPrimario">ENCABEZADO</h1> -->
+            <div class="d-flex col-12 p-2 align-items-center">
+                <div class="line"></div>
+                <span class="my-0 mx-3 texShadonw" id="cumple">01/01/2000</span>
+                <div class="line"></div>
+            </div>
+            <h1 class="my-3 texShadonw">Catalina</h1>
+            <p>Mis 15 Años</p>
+            <p class="col-8 mt-5 texShadonwNegro">Te espero para compartir la alegría de esa noche que será para mi, mágica, inolvidable y única.</p>
+            <audio class="col-9 col-md-6" controls autoplay loop src="../sound/sound.mp3"></audio>
+        </div>
+        <div class="d-flex flex-column justify-content-md-around col-12 flex-md-row p-3">
+            <div class="col-md-5 rounded-4 box my-4 p-3">
+                <h1 class="title">Catalina</h1>
+            </div>
+            <div class="col-md-5 rounded-4 box my-4 p-3">
+                <h1 class="title">Fecha</h1>
+                <div class="fecha">
+                    <p>Cuanto Falta para el <span id="fecha">01/01/2020</span>?</p>
+                </div>
+                <div class="cuentaAtras d-flex justify-content-center" id="cuentaAtras">
+                    <div class="grupo" id="grupoDias">
+                        <p class="grande" id="dias">00</p>
+                        <p class="chico">Días</p>
+                    </div>
+                    <div class="grupo" id="grupoHoras">
+                        <p class="grande" id="horas">00</p>
+                        <p class="chico">Hs</p>
+                    </div>                
+                    <div class="grupo" id="grupoMinutos">
+                        <p class="grande" id="minutos">00</p>
+                        <p class="chico">Min</p>
+                    </div>                
+                    <div class="grupo">
+                        <p class="grande" id="segundos">00</p>
+                        <p class="chico">Seg</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="btnn py-2 px-4">Agendar!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active p-5">
+                    <img src="../img/Foto01.jpg" class="d-block w-100 rounded-4" alt="...">
+                </div>
+                <div class="carousel-item p-5">
+                    <img src="../img/Foto02.jpg" class="d-block w-100 rounded-4" alt="...">
+                </div>
+                <div class="carousel-item p-5">
+                    <img src="../img/Foto03.jpg" class="d-block w-100 rounded-4" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="d-flex flex-column justify-content-md-around col-12 flex-md-row p-3">
+            <div class="col-md-5 rounded-4 my-4 box p-3">
+                <h1 class="title">Dress Code</h1>
+            </div>
+            <div class="col-md-5 rounded-4 my-4 box p-3">
+                <h1 class="title">El Salón</h1>
+                <br>
+                <h4>ESCUELA DE AVIACIÓN MILITAR</h4>
+                <p>Av. Fuerza Aerea Argentina 5011, 5000 Córdoba</p>
+                <div class="d-flex justify-content-center" id="ubicacion">
+                </div>
+                <button class="mb-3 btnn py-2 px-4" onclick="abrirMapa()">Ver en Google Maps</button>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center">
+            <div class="col-11 rounded-4 box p-3">
+                <h1 class="title">CONFIRMAR ASISTENCIA</h1>
+    
+                <div id="confirmarAsistencia">
+                </div>
+            </div>
+            <div class="col-11 rounded-4 box m-4 p-3">
+                <h1 class="title">MUSICA PARA EL EVENTO</h1>
+                <div id="recomendarCancion">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+<script src="../js/datos.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+</html>

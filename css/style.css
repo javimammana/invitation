@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: open sans;
+}
+
+:root {
+    --colorPrimario: #fff;
+    --colorSecundario: #012E40;
+    --colorFondo: #023859;
+    --colorGris: #99979A;
+    --colorGrisOscuro: #333;
+}
+
+.line {
+    background-color: var(--colorPrimario);
+    height: 2px;
+    width: 100%;
+}
+
+.title {
+    color: var(--colorGris);
+    font-family: moon dance;
+}
+
+.fondoGral {
+    background-color: var(--colorFondo);
+}
+
+.contenedor {
+    max-width: 1000px;
+    
+}
+
+.encabezado {
+    background-image: url("../img/encabezado.png");
+    background-size: cover;
+}
+
+.texShadonw {
+    color: var(--colorPrimario);
+    text-shadow:    0px 0px 10px #023859,
+                    0px 0px 20px #023859,
+                    0px 0px 40px #023859,
+                    0px 0px 80px #023859;
+}
+
+.texShadonwNegro {
+    color: var(--colorPrimario);
+    text-shadow:    0px 0px 10px #023859,
+                    0px 0px 20px #023859,
+                    0px 0px 40px #023859,
+                    0px 0px 80px #023859;
+}
+
+.box {
+    background-color: var(--colorPrimario);
+}
+
+.grupo {
+    margin: 15px;
+    margin-bottom: 30px;
+}
+
+.grande {
+    margin: 0;
+}
+
+.chico {
+    font-size: 10px;
+    margin: 0;
+}
+
+
+
+.btnn {
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    background-color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    margin:  0 30px;
+}
+
+.btnn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btnn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorGrisOscuro);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.btnn::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #333, #023859, #000000, #023859, #000000, #333, #023859, #333
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+.btnn:hover::before {
+    opacity: 1;
+}
+
+.btnn:active:after {
+    background: transparent;
+}
