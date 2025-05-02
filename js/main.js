@@ -46,10 +46,17 @@ let intervalo = setInterval(() => {
 const mapa = document.querySelector("#ubicacion");
 mapa.innerHTML = `<iframe class="col-10 rounded-4 my-5" src="${direccionLink}" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
 
+const esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+const calendario = document.querySelector("#calendario");
+
+if (/Android/i.test(navigator.userAgent)) {
+    calendario.innerHTML = `<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Fiesta+de+15+Años&dates=20250713T000000Z/20250713T040000Z&details=¡Te+esperamos+en+la+fiesta+de+15+años!&location=Salón+de+Eventos" target="_blank">Agendar!</a>`
+} else {
+    calendario.innerHTML = `<a href="../calendar/evento-15años.ics" download="Fiesta15Años.ics">Agendar!</a>`
+}
 
 function abrirMapa() {
-
-    const esMovil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (esMovil) {
         let appUrl;
