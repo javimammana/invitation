@@ -75,4 +75,4 @@ function abrirMapa() {
     confAsistencia.innerHTML = `<button class="mb-3 btnn py-2 px-4"><a href="${formAsistencia}" target="_blank">Confirmar Asistencia</a></button>`
 
     const recCancion = document.querySelector("#recomendarCancion");
-    recCancion.innerHTML = `<button class="mb-3 btnn py-2 px-4"><a href="${formCanciones}" target="_blank">Recomendar Cancion</a></button>`
+    recCancion.innerHTML = `<button class="mb-3 btnn py-2 px-4"><a href="${formCanciones}" target="_blank">Recomendar Canción</a></button>`
