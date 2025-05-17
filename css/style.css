@@ -64,7 +64,7 @@
 }
 
 .txtPrincipal {
-    font-size: clamp(6rem, 3vh, 8rem);
+    font-size: clamp(5rem, 3vh, 8rem);
 }
 
 .texShadonwNegro {
