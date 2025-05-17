@@ -10,7 +10,6 @@
 <body class="d-flex justify-content-center fondoNegro">
     <div class="d-flex flex-column col-12 text-center contenedor fondoGral">
         <div class="encabezado col-12 d-flex flex-column align-items-center py-5">
-            <!-- <h1 class="colorPrimario">ENCABEZADO</h1> -->
             <div class="d-flex col-12 p-2 align-items-center">
                 <div class="line"></div>
                 <span class="my-0 mx-3 texShadonw txtDetalle" id="cumple">01/01/2000</span>
@@ -19,16 +18,26 @@
             <h1 class="my-3 texShadonw txtPrincipal">Catalina</h1>
             <p class="texShadonw txtDetalle">Mis 15 Años</p>
         </div>
+
         <div class="d-flex flex-column align-items-center justify-content-md-around col-12 flex-md-row p-3">
-            <div class="col-11 col-md-5 rounded-4 box my-4 p-3 d-flex flex-column align-items-center">
+            <div class="col-11 rounded-4 box my-4 p-3 d-flex flex-column align-items-center">
                 <div class="col-8 my-5 txtWelcome"><p>Te espero para compartir la alegría de esa noche que será para mi, mágica, inolvidable y única.</p></div>
-                <audio class="col-10" controls autoplay loop src="../sound/sound.mp3"></audio>
+                <audio class="col-10" controls autoplayy loop src="../sound/sound.mp3"></audio>
             </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center justify-content-md-around col-12 flex-md-row p-3">
             <div class="col-11 col-md-5 rounded-4 box my-4 p-3">
                 <h1 class="title">Fecha</h1>
-                <div class="fecha">
-                    <p>Cuanto Falta para el <span id="fecha">01/01/2020</span>?</p>
+                <div class="fecha mb-5">
+                    <p class="mb-4">Te espero el</p>
+                    <p id="fecha" class="btnn py-2 px-4">01/01/2020</p>
+                    <p class="m-4">a las</p>
+                    <p id="horaEvento" class="btnn py-2 px-4">00:00</p>
                 </div>
+            </div>
+            <div class="col-11 col-md-5 rounded-4 box my-4 p-3">
+                <p class="title">Cuanto falta?</p>
                 <div class="cuentaAtras d-flex justify-content-center" id="cuentaAtras">
                     <div class="grupo align-content-center" id="grupoDias">
                         <p class="grande" id="dias">00</p>
@@ -48,8 +57,7 @@
                     </div>
                 </div>
                 <div>
-                    <p class="btnn py-2 px-4" id="calendario">
-                        <!-- <a href="../calendar/evento-15años.ics" download="Fiesta15Años.ics">Agendar!</a> -->
+                    <p class="btnn py-2 px-4 mb-4" id="calendario">
                     </p>
                 </div>
             </div>
@@ -63,13 +71,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active p-5">
-                    <img src="../img/Foto01.jpg" class="d-block w-100 rounded-4" alt="...">
+                    <img src="../img/Foto01b.jpg" class="imgCarrusel d-block w-100 rounded-4" alt="...">
                 </div>
                 <div class="carousel-item p-5">
-                    <img src="../img/Foto02.jpg" class="d-block w-100 rounded-4" alt="...">
+                    <img src="../img/Foto02b.jpg" class="imgCarrusel d-block w-100 rounded-4" alt="...">
                 </div>
                 <div class="carousel-item p-5">
-                    <img src="../img/Foto03.jpg" class="d-block w-100 rounded-4" alt="...">
+                    <img src="../img/Foto03b.jpg" class="imgCarrusel d-block w-100 rounded-4" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -88,9 +96,9 @@
                 <div class="d-flex flex-column col-12 align-items-center">
                     <div class="dressCode d-flex align-items-center justify-content-center"><p class="my-3 mx-5">Informal Elegante</p></div>
                     <div class="col-12 my-5">
-                        <img class="col-5 mt-5" src="../img/dressCode.png" alt="">
+                        <img class="col-3 mt-5" src="../img/dressCode.png" alt="">
                     </div>
-                    <p class=" mx-5 p-3 mb-5 btnn">Make the whole place shimmer!</p>
+                    <p class="mx-5 p-3 mb-5 btnn">Make the whole place shimmer!</p>
                 </div>
             </div>
             <div class="col-11 col-md-5 rounded-4 my-4 box p-3">
@@ -106,6 +114,20 @@
 
         <div class="d-flex flex-column align-items-center p-3">
             <div class="col-11 rounded-4 box p-3 mb-3">
+                <div class="d-flex flex-column align-items-center p-3">
+                    <p class="col-8 col-md-6">Tu presencia es mi mejor regalo, pero si queres hacerme un presente podes hacerlo por estos medios.</p>
+                    <p class="btnn p-2 col-6 mt-5" id="verDatos">Ver Datos</p>
+                    <div class="col-12 d-none flex-column align-items-center" id="alias">
+                        <p class="title">Alias</p>
+                        <div class="d-flex col-8 justify-content-center btnn pt-2" id="copyBtn">
+                            <p id="aliasTxt" class="pt-1">ALIAS</p> <div class=" ms-3"><img src="../img/copy.png" alt=""></div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <div class="col-11 rounded-4 box p-3 m-5">
                 <h1 class="title mb-5">Asistencia</h1>
                 <div id="confirmarAsistencia">
                 </div>
@@ -124,5 +146,6 @@
 <script src="../js/datos.js"></script>
 <script src="../js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </html>

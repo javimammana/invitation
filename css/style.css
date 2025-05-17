@@ -1,10 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+DE+Grund:wght@100..400&display=swap');
 
 * {
@@ -48,7 +41,7 @@
 
 .fondoGral {
     background-color: var(--colorFondo);
-    background-image: url("../img/encabezado02.png");
+    background-image: url("../img/encabezado.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -62,17 +55,12 @@
     
 }
 
-.encabezado {
-    /* background-image: url("../img/encabezado02.png"); */
-    /* background-size: cover; */
-}
-
 .texShadonw {
     color: var(--colorPrimario);
-    text-shadow:    0px 0px 10px #023859,
-                    0px 0px 20px #023859,
-                    0px 0px 40px #023859,
-                    0px 0px 80px #023859;
+    text-shadow:    0px 0px 10px #585959,
+                    0px 0px 20px #585959,
+                    0px 0px 40px #585959,
+                    0px 0px 80px #585959;
 }
 
 .txtPrincipal {
@@ -256,4 +244,15 @@
 
 .btnn:active:after {
     background: transparent;
+}
+
+
+.imgCarrusel {
+    filter: grayscale(1);
+    transition: all 0.8s ease;
+}
+
+.imgCarrusel:hover {
+    filter: grayscale(0);
+    transition: all 0.8s ease;
 }

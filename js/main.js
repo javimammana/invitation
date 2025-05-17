@@ -6,16 +6,20 @@ const parrafoHoras = document.querySelector("#horas");
 const parrafoMinutos = document.querySelector("#minutos");
 const parrafoSegundos = document.querySelector("#segundos");
 const spanFecha = document.querySelector("#fecha");
+const spanHoraEvento = document.getElementById("horaEvento");
 const cuentaAtras = document.querySelector("#cuentaAtras");
 const grupoDias = document.querySelector("#grupoDias");
 const grupoHoras = document.querySelector("#grupoHoras");
 const grupoMinutos = document.querySelector("#grupoMinutos");
 
 const spanCumple = document.querySelector("#cumple");
+const aliasTxt = document.getElementById('aliasTxt');
 
 spanCumple.innerHTML = cumple.toLocaleDateString();
 
 spanFecha.innerHTML = fecha.toLocaleDateString();
+spanHoraEvento.innerHTML = horaEvento;
+aliasTxt.innerHTML = alias;
 
 let intervalo = setInterval(() => {
     const hoy = new Date().getTime();
@@ -83,3 +87,28 @@ function abrirMapa() {
 
     const recCancion = document.querySelector("#recomendarCancion");
     recCancion.innerHTML = `<button class="mb-3 btnn py-2 px-4"><a href="${formCanciones}" target="_blank">Recomendar Canción</a></button>`
+
+
+document.getElementById('verDatos'). addEventListener('click', function() {
+    document.getElementById('verDatos').classList.add("d-none");
+    document.getElementById('alias').classList.remove("d-none");
+    document.getElementById('alias').classList.add("d-flex");
+});
+
+document.getElementById('copyBtn').addEventListener('click', function() {
+    const aliasTxtCopy = aliasTxt.textContent;
+    navigator.clipboard.writeText(aliasTxtCopy)
+    .then(() => {
+        Swal.fire({
+        position: "top",
+        title: "Alias Copiado!",
+        color: "#023859",
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true,
+        });
+    })
+    .catch(err => {
+        console.log("Error al copiar Alias:", err);
+    });
+});
